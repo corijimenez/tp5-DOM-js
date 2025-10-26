@@ -1,46 +1,43 @@
-body{
-    display: flex;
-    flex-direction: column;
-    min-width: 100vh;
-    /* background-image: linear-gradient( 105.9deg,  rgba(0,122,184,1) 24.4%, rgba(46,0,184,0.88) 80.5% ); */
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vh;
+  /* background-image: linear-gradient( 105.9deg,  rgba(0,122,184,1) 24.4%, rgba(46,0,184,0.88) 80.5% ); */
 }
 
-main{
-    flex-grow: 1;
+main {
+  flex-grow: 1;
 }
 
-.body-ej1{
-    background-color: #23272b;
+.body-ej1 {
+  background-color: #23272b;
 }
 
-.input-ej1{
-    
+.input-ej1 {
   border-radius: 0.5rem;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 0.5rem;
-
 }
 
 .card {
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   max-width: 400px;
   margin: auto;
 }
 
-.main-ej1{
-background-color: rgb(92, 30, 125); 
+.main-ej1 {
+  background-color: rgb(92, 30, 125);
 }
 
 /* estilos ej2 */
- .body-ej2 {
-        background: linear-gradient(135deg, #fffeff, #e9ecef);
-      }
-      
-  .form-ej2.card {
-        border: none;
-        border-radius: 1rem;
-      }
-     
+.body-ej2 {
+  background: linear-gradient(135deg, #719cd7, #e9ecef);
+}
+
+.form-ej2.card {
+  border: none;
+  border-radius: 1rem;
+}

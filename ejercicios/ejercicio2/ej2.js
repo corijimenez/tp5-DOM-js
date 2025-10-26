@@ -152,10 +152,12 @@ botones.classList.remove("d-none");
 
 btnGeneracion.addEventListener("click", () => {
   resultado.innerHTML = `<div class="alert alert-info">${persona.mostrarGeneracion()}</div>`;
+  alert(persona.mostrarGeneracion());
 });
 
 btnMayor.addEventListener("click", () => {
   resultado.innerHTML = `<div class="alert alert-success">${persona.esMayorDeEdad()}</div>`;
+  alert(persona.esMayorDeEdad());
 });
 
 btnSalir.addEventListener("click", () => {
@@ -163,4 +165,5 @@ btnSalir.addEventListener("click", () => {
   formulario.reset();
   botones.classList.add("d-none");
   resultado.classList.add("d-none");
+  alert("👋 Gracias por usar la aplicación. ¡Hasta luego!");
 });
