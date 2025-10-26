@@ -33,3 +33,14 @@ main{
 .main-ej1{
 background-color: rgb(92, 30, 125); 
 }
+
+/* estilos ej2 */
+ .body-ej2 {
+        background: linear-gradient(135deg, #fffeff, #e9ecef);
+      }
+      
+  .form-ej2.card {
+        border: none;
+        border-radius: 1rem;
+      }
+     

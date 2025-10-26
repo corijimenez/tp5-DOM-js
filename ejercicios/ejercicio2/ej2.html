@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,9 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">Trabajo Practico N°5</a>
+          <a class="navbar-brand" href="../../index.html"
+            >Trabajo Practico N°5</a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -53,83 +55,75 @@
         </div>
       </nav>
     </header>
-    <main class="container text-center my-5 main-ej1">
-      <h1>Formulario</h1>
-      <p>Ingrese los datos de la persona:</p>
-      <div class="row">
-        <div class="col-6">
-          <form>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="nombre"
-                aria-describedby="emailHelp"
-                placeholder="Nombre"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="edad"
-                placeholder="Edad"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="dni"
-                placeholder="dni"
-              />
-            </div>
+    <main class="container my-5">
+      <div class="text-center mb-4">
+        <h1 class="fw-bold text-primary">Formulario de Persona</h1>
+        <p class="text-muted">Ingrese los datos solicitados para crear una persona.</p>
+      </div>
 
+      <div class="row align-items-center justify-content-center g-4">
+        <div class="col-lg-6 col-md-8">
+          <form id="formulario" class="card bg-white form-ej2">
             <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="peso"
-                placeholder="peso"
-              />
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre" required />
             </div>
             <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="altura"
-                placeholder="altura"
-              />
+              <input type="number" class="form-control" id="edad" placeholder="Edad" required/>
             </div>
-
-            <div class="mb-3 form-check">
-              <select class="form-select" aria-label="Seleccione su sexo">
-                <option selected></option>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="dni" placeholder="DNI" required />
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" id="peso" placeholder="Peso (kg)" required />
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" id="altura" placeholder="Altura (cm)" required/>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" id="sexo" aria-label="Seleccione su sexo" required>
+                <option selected disabled>Seleccione sexo...</option>
                 <option value="M">Mujer</option>
                 <option value="H">Hombre</option>
               </select>
             </div>
-
-            <div class="mb-3 row g-3">
+            <div class="mb-4">
               <input
                 type="number"
                 class="form-control"
-                placeholder="Año"
+                placeholder="Año de nacimiento"
                 min="1900"
-                aria-label="año"
+                id="anio"
+                required
               />
             </div>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+              Crear Persona
+            </button>
           </form>
-        </div>
-        <div class="col-6">
+
+          </div>
+
+        <div class="col-lg-6 d-none d-lg-block img-container">
           <img
-            src="../../img-1.jpg"
-            alt="Women working on laptop"
-            class="img-fluid rounded"
+            src="../../humano.png"
+            alt="Persona trabajando"
+            class="img-fluid rounded shadow-sm"
           />
         </div>
+        <div id="botonesAccion" class="col-lg-12 mt-4 row text-center d-none justify-content-center">
+          <div id="resultado" class="text-center d-none"></div>
+
+          <button id="btnGeneracion" class="btn btn-info m-2 shadow-sm col-3">
+              Mostrar Generación
+            </button>
+            <button id="btnMayor" class="btn btn-success m-2 shadow-sm col-3">
+              ¿Es mayor de edad?
+            </button>
+            <button id="btnSalir" class="btn btn-danger m-2 shadow-sm col-3">Salir</button>
+          </div>
+
+        
       </div>
     </main>
     <footer class="text-center py-3 bg-dark">
