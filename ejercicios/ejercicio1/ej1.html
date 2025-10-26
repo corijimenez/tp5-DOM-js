@@ -14,9 +14,9 @@
     />
     <title>Ejercicio 1</title>
   </head>
-  <body>
+  <body class="body-ej1">
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="">Trabajo Practico N°5</a>
           <button
@@ -38,45 +38,53 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../ejercicio2/ej2.html">Ejercicio 2</a>
+                <a class="nav-link" href="../ejercicio2/ej2.html"
+                  >Ejercicio 2</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../ejercicio3/ej3.html">Ejercicio 3</a>
+                <a class="nav-link" href="../ejercicio3/ej3.html"
+                  >Ejercicio 3</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container text-center my-5 ">
+    <main class="container text-center my-5 main-ej1">
+
       <h1 class="fs-1 text-white my-3">Juego del Numero Magico 🔮</h1>
-      <p class="my-4 fs-5">
-        Adivina el numero magico entre 1 y 100. 🎯
-      </p>
+      <p class="my-4 fs-5 text-white">Adivina el numero magico entre 1 y 100. 🎯</p>
       <button id="btnComenzar" class="btn btn-success">Comenzar Juego</button>
 
-        <div class="mb-3 my-4 border bg-light rounded w-50 mx-auto">
-         <form class="p-4">
-        <div class="mb-3">
-          <label for="input" class="form-label fs-5"
-            >Ingresa un numero:</label
-          >
-          <input
-            type="text"
-            class="form-control "
-            id="input"
-            aria-describedby="Numero"
-            min="1"
-            max="100"  
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-success" id="btnEnviar">Enviar</button>
-      </form>
-  </div>
-     <div></div>
+      <div class="card mb-3 my-4 border bg-light rounded w-50 mx-auto">
+        <form class="p-4">
+          <div class="mb-3">
+            <label for="input" class="form-label fs-5"
+              >Ingresa un numero:</label
+            >
+            <input
+              type="text"
+              class="form-control input-ej1"
+              id="input"
+              aria-describedby="Numero"
+              min="1"
+              max="100"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-success " id="btnEnviar">
+            Enviar
+          </button>
+        </form>
+      </div>
+      <div></div>
     </main>
-    <footer></footer>
+   <footer class="text-center py-3 bg-dark">
+      <p class="text-white">&copy; Todos los derechos reservados.</p>
+      <p class="text-white">by Corina Jimenez 🎀</p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

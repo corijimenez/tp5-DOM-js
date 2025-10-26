@@ -31,7 +31,6 @@ function verificarNumero() {
     if (numeroIngresado === numeroMagico) {
         mostrarConfeti();
         alert("🎉 ¡Felicitaciones! Adivinaste el número mágico 🎉");
-        reiniciarJuego();
       } else if (numeroIngresado > numeroMagico) {
         alert("El número ingresado es MAYOR al número mágico.");
       } else {
@@ -42,9 +41,7 @@ function verificarNumero() {
     }
 
 
-function reiniciarJuego() {
-     alert("🔁 El juego se reiniciará. ¡Presiona 'Comenzar el juego' para volver a jugar!");
-    }
+
 
 function mostrarConfeti() {
   confetti({
