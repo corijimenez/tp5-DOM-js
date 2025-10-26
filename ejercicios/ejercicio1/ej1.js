@@ -8,6 +8,7 @@ Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que 
 
 // ------------FUNCIONES-------------------
 
+
 function generarNumeroMagico() {
 return Math.floor(Math.random() * 100) + 1;
 }
@@ -28,6 +29,7 @@ function verificarNumero() {
     }
 
     if (numeroIngresado === numeroMagico) {
+        mostrarConfeti();
         alert("🎉 ¡Felicitaciones! Adivinaste el número mágico 🎉");
         reiniciarJuego();
       } else if (numeroIngresado > numeroMagico) {
@@ -43,6 +45,14 @@ function verificarNumero() {
 function reiniciarJuego() {
      alert("🔁 El juego se reiniciará. ¡Presiona 'Comenzar el juego' para volver a jugar!");
     }
+
+function mostrarConfeti() {
+  confetti({
+    particleCount: 150,
+    spread: 90,
+    origin: { y: 0.6 }
+  });
+}
 
 
 //-------------variebles----------------
