@@ -79,91 +79,88 @@ class Persona {
     this.rasgo = nuevoRasgo;
   }
 
-mostrarGeneracion() {
-    let nuevaGeneracion = "";
-    let nuevoRasgo = "";
+ mostrarGeneracion() {
+    let generacion, rasgo;
 
     if (this.#anioNacimiento >= 1994 && this.#anioNacimiento <= 2010) {
-      nuevaGeneracion = "Generación Z";
-      nuevoRasgo = "Irreverencia";
+      generacion = "Generación Z";
+      rasgo = "Irreverencia";
     } else if (this.#anioNacimiento >= 1981 && this.#anioNacimiento <= 1993) {
-      nuevaGeneracion = "Generación Y (Millennials)";
-      nuevoRasgo = "Frustración";
+      generacion = "Generación Y (Millennials)";
+      rasgo = "Frustración";
     } else if (this.#anioNacimiento >= 1969 && this.#anioNacimiento <= 1980) {
-      nuevaGeneracion = "Generación X";
-      nuevoRasgo = "Obsesión por el éxito";
+      generacion = "Generación X";
+      rasgo = "Obsesión por el éxito";
     } else if (this.#anioNacimiento >= 1949 && this.#anioNacimiento <= 1968) {
-      nuevaGeneracion = "Baby Boom";
-      nuevoRasgo = "Ambición";
+      generacion = "Baby Boom";
+      rasgo = "Ambición";
     } else if (this.#anioNacimiento >= 1930 && this.#anioNacimiento <= 1948) {
-      nuevaGeneracion = "Silent Generation";
-      nuevoRasgo = "Austeridad";
+      generacion = "Silent Generation";
+      rasgo = "Austeridad";
     } else {
-      nuevaGeneracion = "Fuera de rango";
-      nuevoRasgo = "Desconocido";
+      generacion = "Fuera de rango";
+      rasgo = "Desconocido";
     }
-    this.setGeneracion(nuevaGeneracion);
-    this.setRasgo(nuevoRasgo);
-    console.log(`Pertenece a la ${nuevaGeneracion}`);
-    console.log(`Rasgo característico: ${nuevoRasgo}`);
+
+    return `Pertenece a la ${generacion}. Rasgo característico: ${rasgo}.`;
   }
 
-  esMayorDeEdad() {
-    let mensaje;
-    if (this.#edadd >= 18) {
-      mensaje = `${this.#nombre} es mayor de edad ✅`;
-    } else {
-      mensaje = `${this.#nombre} es menor de edad ❌`;
-    }
-    console.log(mensaje);
-    return mensaje;
+ esMayorDeEdad() {
+    return this.#edadd >= 18
+      ? `${this.#nombre} es MAYOR de edad ✅`
+      : `${this.#nombre} es MENOR de edad ❌`;
   }
 
-  mostrarDatos() {
-    console.log("---- Datos de la persona ----");
-    console.log(`Nombre: ${this.#nombre}`);
-    console.log(`Edad: ${this.#edadd}`);
-    console.log(`DNI: ${this.#DNI}`);
-    console.log(`Sexo: ${this.#sexo}`);
-    console.log(`Peso: ${this.#peso} kg`);
-    console.log(`Altura: ${this.#altura} m`);
-    console.log("-----------------------------");
-
-    document.writeln("<h3>Datos de la persona: </h3>");
-    document.writeln("<hr>");
-    document.writeln(`<p>Nombre: ${this.#nombre}</p>`);
-    document.writeln(`<p>Edad: ${this.#edadd}</p>`);
-    document.writeln(`<p>DNI: ${this.#DNI}</p>`);
-    document.writeln(`<p>Sexo: ${this.#sexo}</p>`);
-    document.writeln(`<p>Año de Nacimiento: ${this.#anioNacimiento}</p>`);
-    document.writeln(`<p>Generación: ${this.generacion}</p>`);
-    document.writeln(`<p>Rasgo: ${this.rasgo}</p>`);
-  }
 }
-/*funciones */
-function ingresarDatos(event) {
-    event.preventDefault();
-    const nombre = document.getElementById("nombre").value;
-    const edad = parseInt(document.getElementById("edad").value);
-    const DNI = document.getElementById("DNI").value;
-    const sexo = document.getElementById("sexo").value;
-    const peso = parseFloat(document.getElementById("peso").value);
-    const altura = parseFloat(document.getElementById("altura").value);
-    const anioNacimiento = parseInt(document.getElementById("anioNacimiento").value);
-    const persona = new Persona(
-      nombre,
-      edad, 
-        DNI,
-        sexo,
-        peso,
-        altura,
-        anioNacimiento
-    );
-    persona.mostrarGeneracion();
-    alert(persona.esMayorDeEdad());
-    persona.mostrarDatos();
-}
-const btnEnviar = document.getElementById('btnEnviar');
+//---------------variables---------------
+const formulario = document.getElementById("formulario")
+const resultado = document.getElementById("resultado")
+const botones = document.getElementById("botonesAccion")
+const btnGeneracion = document.getElementById("btnGeneracion")
+const btnMayor = document.getElementById("btnMayor")
+const btnSalir = document.getElementById("btnSalir")
+let persona =null
 
-btnEnviar.addEventListener('click', ingresarDatos);
+/*botones */
+formulario.addEventListener("submit", function (e) {
+  e.preventDefault();
 
+  const nombre = document.getElementById("nombre").value;
+  const edad = parseInt(document.getElementById("edad").value);
+  const DNI = document.getElementById("dni").value;
+  const sexo = document.getElementById("sexo").value;
+  const peso = parseFloat(document.getElementById("peso").value);
+  const altura = parseFloat(document.getElementById("altura").value);
+  const anioNacimiento = parseInt(
+    document.getElementById("anio").value
+  );
+
+  persona = new Persona(
+    nombre,
+    edad,
+    DNI,
+    sexo,
+    peso,
+    altura,
+    anioNacimiento
+  );
+botones.classList.remove("d-none");
+  resultado.classList.remove("d-none");
+  resultado.innerHTML = `<div class="alert alert-success">Persona creada con exito! Que desea Saber? </div>`;
+});
+
+
+btnGeneracion.addEventListener("click", () => {
+  resultado.innerHTML = `<div class="alert alert-info">${persona.mostrarGeneracion()}</div>`;
+});
+
+btnMayor.addEventListener("click", () => {
+  resultado.innerHTML = `<div class="alert alert-success">${persona.esMayorDeEdad()}</div>`;
+});
+
+btnSalir.addEventListener("click", () => {
+  persona = null;
+  formulario.reset();
+  botones.classList.add("d-none");
+  resultado.classList.add("d-none");
+});
