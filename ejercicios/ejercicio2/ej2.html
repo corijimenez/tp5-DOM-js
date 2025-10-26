@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Corina Jimenez" />
+    <meta name="description" content="Trabajo Practico DOM - Ejercicio 1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Ejercicio 2</title>
+  </head>
+  <body class="body-ej2">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">Trabajo Practico N°5</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../ejercicio1/ej1.html"
+                  >Ejercicio 1</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ejercicio 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../ejercicio3/ej3.html"
+                  >Ejercicio 3</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container text-center my-5 main-ej1">
+      <h1>Formulario</h1>
+      <p>Ingrese los datos de la persona:</p>
+      <div class="row">
+        <div class="col-6">
+          <form>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                aria-describedby="emailHelp"
+                placeholder="Nombre"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="edad"
+                placeholder="Edad"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="dni"
+                placeholder="dni"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="peso"
+                placeholder="peso"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="altura"
+                placeholder="altura"
+              />
+            </div>
+
+            <div class="mb-3 form-check">
+              <select class="form-select" aria-label="Seleccione su sexo">
+                <option selected></option>
+                <option value="M">Mujer</option>
+                <option value="H">Hombre</option>
+              </select>
+            </div>
+
+            <div class="mb-3 row g-3">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Año"
+                min="1900"
+                aria-label="año"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+        <div class="col-6">
+          <img
+            src="../../img-1.jpg"
+            alt="Women working on laptop"
+            class="img-fluid rounded"
+          />
+        </div>
+      </div>
+    </main>
+    <footer class="text-center py-3 bg-dark">
+      <p class="text-white">&copy; Todos los derechos reservados.</p>
+      <p class="text-white">by Corina Jimenez 🎀</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./ej2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </body>
+</html>
