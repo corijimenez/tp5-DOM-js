@@ -10,7 +10,7 @@ function agregarTarea(e){
         //Crear elemento de lista
         const li = document.createElement("li");
         li.className = "list-group-item d-flex justify-content-between align-items-center";
-        li.textContent = texto;
+        li.textContent =" ✏️ "+ texto;
 
         //Crear btn de eliminar
         const btnEliminar = document.createElement("button");

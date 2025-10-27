@@ -41,3 +41,14 @@ main {
   border: none;
   border-radius: 1rem;
 }
+
+/*estilos ej3*/
+.body-ej3{
+background-color: rgb(223, 223, 223);
+}
+.card-ej3{
+  
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(249, 249, 249, 0.133);
+}
