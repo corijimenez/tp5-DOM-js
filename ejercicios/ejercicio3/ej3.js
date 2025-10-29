@@ -30,6 +30,8 @@ function agregarTarea(e){
 
         // limoiar input
         tareaInput.value = "";
+    }else{
+        alert("Por favor ingrese una tarea");
     }
 }
 
