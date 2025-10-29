@@ -14,7 +14,7 @@
     />
     <title>Ejercicio 5</title>
   </head>
-  <body  >
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -48,38 +48,44 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../ejercicio3/ej3.html">Ejercicio 3</a>
+                <a class="nav-link" href="../ejercicio3/ej3.html"
+                  >Ejercicio 3</a
+                >
               </li>
-              
+
               <li class="nav-item">
-                <a class="nav-link " href="../ejercicio4/ej4.html"
+                <a class="nav-link" href="../ejercicio4/ej4.html"
                   >Ejercicio 4</a
                 >
               </li>
-              
+
               <li class="nav-item">
                 <a class="nav-link active" href="../ejercicio5/ej5.html"
                   >Ejercicio 5</a
                 >
               </li>
-              
+
               <li class="nav-item">
                 <a class="nav-link" href="../ejercicio6/ej6.html"
                   >Ejercicio 6</a
                 >
               </li>
-            
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="">
-      <div id="reloj"></div>
-<button id="iniciar"></button>
-<button id="pausar"></button>
-<button id="resetear"></button>
-</main>
+    <main class="d-flex flex-column align-items-center bg-body-tertiary">
+        <h1 class="mt-5">Cronometro ⏱️</h1>
+        <div class=" bg-light p-4 m-4 rounded-3 card">
+        <div class="d-flex justify-content-center my-3 fs-1" id="reloj"> 00:00:00</div>
+        <div class="d-grid gap-3 d-flex justify-content-center my-3">
+            <button class="btn btn-primary" id="iniciar">Iniciar</button>
+            <button class="btn btn-outline-warning" id="pausar">Pausar</button>
+            <button class="btn btn-danger" id="resetear">Resetear</button>
+        </div>
+      </div>
+    </main>
     <footer class="text-center py-3 bg-dark">
       <p class="text-white">&copy; Todos los derechos reservados.</p>
       <p class="text-white">by Corina Jimenez 🎀</p>

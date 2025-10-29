@@ -27,17 +27,17 @@ function actualizar() {
 
 }
 
-function iniciarR() {
+function iniciarCronometro() {
   if (!intervalo) {
     intervalo = setInterval(actualizar, 1000);
   }
 }
-function pausarR() {
+function pausarCronometro() {
     clearInterval(intervalo);
     intervalo = null;
 }
 
-function resetearR() {
+function resetearCronometro() {
     clearInterval(intervalo);
     intervalo = null;
     segundos = 0;
@@ -46,6 +46,6 @@ function resetearR() {
     reloj.textContent = "00:00:00";
 }   
 
-iniciar.addEventListener("click", iniciarR);
-pausar.addEventListener("click", pausarR);
-resetear.addEventListener("click", resetearR);
+iniciar.addEventListener("click", iniciarCronometro);
+pausar.addEventListener("click", pausarCronometro);
+resetear.addEventListener("click", resetearCronometro);
